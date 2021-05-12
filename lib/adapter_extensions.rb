@@ -6,7 +6,10 @@ class ActiveRecord::Base
     # cause stack level too deep errors - make sure we avoid this
     unless self.instance_methods.include?('establish_connection_without_adapter_extensions')
       def establish_connection_with_adapter_extensions(*args)
+        puts "args are #{args}"
+        puts "connection pool pre establish is #{connection_pool}"
         establish_connection_without_adapter_extensions(*args)
+        puts "connection pool post establish is #{connection_pool}"
         ActiveSupport.run_load_hooks(:active_record_connection_established, connection_pool)
       end
 
@@ -17,5 +20,6 @@ class ActiveRecord::Base
 end
 
 ActiveSupport.on_load(:active_record_connection_established) do |connection_pool|
+  puts "connection pool is onload is #{connection_pool}"
   AdapterExtensions.load_from_connection_pool connection_pool
 end
