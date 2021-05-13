@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.version = AdapterExtensions::VERSION
   s.platform = Gem::Platform::RUBY
   s.authors = ["Anthony Eden", "Thibaut Barrère"]
-  s.email = ["thibaut.barrere@gmail.com"]
-  s.homepage = "https://github.com/activewarehouse/adapter_extensions"
+  s.email = []
+  s.homepage = "https://github.com/grnhse/adapter_extensions"
   s.summary = %q{Extensions to Rails ActiveRecord adapters.}
   s.description = %q{Provides various extensions to the Rails ActiveRecord adapters.}
   s.rubyforge_project = %q{activewarehouse}
