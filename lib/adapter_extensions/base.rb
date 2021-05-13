@@ -15,5 +15,4 @@ module AdapterExtensions
   def self.load_from_connection_pool(connection_pool)
     require_adapter connection_pool.spec.config[:adapter]
   end
-
 end
