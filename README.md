@@ -1,3 +1,7 @@
+**Note**: This Gem is provided by Greenhouse As-Is to make this Gem functional with Rails 5.2 implemations specifically. This Gem is not supported by Greenhouse and issues posted to it will be closed.
+
+---------------------------
+
 AdapterExtensions add extra abilities to Rails ActiveRecord adapters, including:
 
 * bulk load
